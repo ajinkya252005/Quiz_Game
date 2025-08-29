@@ -1,6 +1,6 @@
 # Simple Quiz Game
 
-A fun and interactive quiz game built with vanilla HTML, CSS, and JavaScript. Test your knowledge with a series of multiple-choice questions and see your score and a personalized remark at the end!
+A fun and interactive quiz game built with HTML, CSS, and JavaScript. Test your knowledge with a series of multiple-choice questions and see your score and a personalized remark at the end!
 
 ---
 
@@ -28,7 +28,7 @@ To run this project locally, follow these simple steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/ajinkya252005/Quiz_Game.git](https://github.com/ajinkya252005/Quiz_Game.git)
+    git clone [https://github.com/ajinkya252005/Quiz_Game.git]
     ```
 2.  **Navigate to the project directory:**
     ```bash
@@ -37,3 +37,4 @@ To run this project locally, follow these simple steps:
 3.  **Open the `index.html` file in your web browser.**
 
 That's it! You can now play the quiz.
+
