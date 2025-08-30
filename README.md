@@ -6,11 +6,12 @@ A fun and interactive quiz game built with HTML, CSS, and JavaScript. Test your 
 
 ## 🚀 Features
 
-- **Clean User Interface:** A simple and intuitive design with three distinct screens: Start, Quiz, and Result.
-- **Dynamic Questions:** Questions are loaded dynamically from a JavaScript array, making it easy to add more content.
+- **Clean User Interface:** A simple and intuitive design with three distinct screens: Start, Quiz, and Result. Most of the elements are dynamic, hence changes made to questions is not an issue.
+- **Dynamic Questions:** Questions are loaded dynamically from a JavaScript array, making it easy to add more questions.
 - **Instant Feedback:** The game tracks your score as you answer the questions.
 - **Final Results:** A dedicated results screen shows your final score and a custom remark based on your performance.
 - **Restart Option:** Easily restart the quiz from the beginning with a single click.
+- **Progress Bar:** User can easily know their progress.
 
 ---
 
@@ -37,4 +38,5 @@ To run this project locally, follow these simple steps:
 3.  **Open the `index.html` file in your web browser.**
 
 That's it! You can now play the quiz.
+
 
