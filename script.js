@@ -44,6 +44,15 @@ const questions = [
       { text: "NaCl", correct: false },
     ],
   },
+  {
+    question: "How many continents in the world?",
+    answers: [
+      { text: "7", correct: true },
+      { text: "6", correct: false },
+      { text: "8", correct: false },
+      { text: "5", correct: false },
+    ],
+  },
 ];
 
 
@@ -70,16 +79,18 @@ startButton.addEventListener("click",()=>{
 
 let currentQuestionIndex = 0;
 let resultScore = 0;
-
+let allQuestions = questions.length;
 function showQuestion(){
     let currentQuestion = questions[currentQuestionIndex];
     questionTitle.textContent = currentQuestion.question;
     questionNumber.textContent = currentQuestionIndex + 1;
     totalQuestions.textContent = questions.length;
     score.textContent = resultScore;
-    
+    let pBar = document.createElement("div");
+    let pBarWidth = 400 / questions.length;
+    pBar.style.width = pBarWidth + "px";
+    progressBar.append(pBar);
     answer.innerHTML = "";
-
     currentQuestion.answers.forEach(ans =>{
         let option = document.createElement("button");
         option.textContent = ans.text;
@@ -110,27 +121,24 @@ function showResult(){
         currentQuestionIndex = 0;
         resultScreen.style.display = "none";
         quizScreen.style.display = "flex";
+        progressBar.innerHTML = "";
         showQuestion();
     });
     finalScore.textContent = resultScore;
-    totalScore = questions.length;
-    switch(resultScore){
-        case 0:
-            remark.textContent = "Give it another try!!";
-            break;
-        case 1:
-            remark.textContent = "Keep Learning!!";
-            break;
-        case 2:
-            remark.textContent = "Not Bad!!";
-            break;
-        case 3:
-            remark.textContent = "Good Job!!";
-            break;
-        case 4:
-            remark.textContent = "Great!!";
-            break;
-        case 5:
-            remark.textContent = "Excellent!!";
+    totalScore.textContent = questions.length;
+    if(resultScore <= allQuestions/5){
+      remark.textContent = "Give it another try!!";
     }
+    else if(resultScore <= 2*allQuestions/5){
+      remark.textContent = "Keep Learning!!";
+    }
+    else if(resultScore <= 3*allQuestions/5){
+      remark.textContent = "Not Bad!!";
+    }
+    else if(resultScore <= 4*allQuestions/5){
+      remark.textContent = "Good Job!!";
+    }
+    else{
+      remark.textContent = "Excellent!!";
+    }        
 }
